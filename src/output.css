@@ -11,6 +11,8 @@
     --font-weight-normal: 400;
     --leading-normal: 1.5;
     --radius-lg: 0.5rem;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-primary: #ffa700;
@@ -189,6 +191,31 @@
     }
   }
 }
+.btn {
+  display: inline-block;
+  border-radius: 50px;
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: transparent;
+  background-color: transparent;
+  padding-inline: calc(var(--spacing) * 3.75);
+  padding-block: calc(var(--spacing) * 2.5);
+  text-align: center;
+  font-size: 20px;
+}
+.btn.bg--primary {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+.btn:hover {
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+}
+.btn.menu:hover {
+  background-color: var(--color-dark);
+  color: var(--color-primary);
+}
 .header {
   position: fixed;
   top: calc(var(--spacing) * 0);
@@ -266,15 +293,14 @@
 }
 .banner a {
   margin-top: calc(var(--spacing) * 5);
-  width: calc(var(--spacing) * 3.5);
-  height: calc(var(--spacing) * 3.5);
   width: calc(var(--spacing) * 45);
-  border-radius: var(--radius-lg);
-  background-color: var(--color-primary);
-  padding-bottom: calc(var(--spacing) * 6);
-  text-align: center;
+  font-size: 14px;
   --tw-tracking: 2px;
   letter-spacing: 2px;
+}
+.banner a:hover {
+  background-color: var(--color-light);
+  color: var(--color-primary);
 }
 .menu_summary .container {
   padding: calc(var(--spacing) * 0);
@@ -448,6 +474,11 @@
   --tw-tracking: 3px;
   letter-spacing: 3px;
 }
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-shadow {
   syntax: "*";
   inherits: false;
@@ -543,6 +574,7 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;

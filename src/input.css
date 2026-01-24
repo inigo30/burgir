@@ -9,6 +9,18 @@
     --spacing-calc: calc(110vh - 103px);
 }
 
+.btn {
+    @apply inline-block py-2.5 px-3.75 bg-transparent rounded-[50px] border border-transparent text-[20px] text-center ;
+}
+.btn.bg--primary {
+    @apply bg-primary text-light ;
+}
+.btn:hover{
+    @apply transition;
+}
+.btn.menu:hover{
+    @apply bg-dark text-primary 
+}
 .header{
     @apply shadow-md fixed w-full top-0 left-0 p-3.75 bg-light z-999;
 }
@@ -47,7 +59,10 @@
     @apply leading-normal ;
 }
 .banner a{
-    @apply w-45 size-3.5 tracking-[2px] mt-5 bg-primary rounded-lg text-center pb-6 ;
+    @apply w-45 text-[14px] tracking-[2px] mt-5;
+}
+.banner a:hover {
+    @apply text-primary bg-light;
 }
 .menu_summary .container{
     @apply p-0;
