@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@theme{
+    --color-primary: #ffa700;
+    --color-light: #ffffff;
+    --color-dark: #2b2b2b;
+    --color-mid: #00000067;
+    --color-lightmid: #F7F6F9;
+    --spacing-calc: calc(110vh - 103px);
+}
+
+.header{
+    @apply shadow-md fixed w-full top-0 left-0 p-3.75 bg-light z-999;
+}
+.header h3{
+    @apply hidden;
+}
+.header__wrapper{
+    @apply flex items-center justify-between;
+}
+.burgir{
+    @apply p-1 bg-primary rounded-lg ;
+}
+.header span{
+    @apply w-6.25 h-1 rounded-[50px] bg-light block m-1.25 ;
+}
+.header__nav{
+    @apply bg-dark absolute -right-400 h-calc top-40 w-full ;
+}
+
+.banner{
+    @apply p-0 pt-20;
+}
+.banner .container{
+    @apply bg-[url(/dist/img/banner.webp)] h-125 bg-cover bg-no-repeat bg-center flex items-center ;
+}
+.banner .container img {
+    @apply w-75
+}
+.banner__text{
+    @apply flex flex-col w-fit max-w-75 text-light p-0  ;
+}
+.banner h2{
+    @apply text-[50px] tracking-[10px] font-[450] ;
+}
+.banner p{
+    @apply leading-normal ;
+}
+.banner a{
+    @apply w-45 size-3.5 tracking-[2px] mt-5 bg-primary rounded-lg text-center pb-6 ;
+}
+.menu_summary .container{
+    @apply p-0;
+}
+.menu__summary__card{
+    @apply flex flex-col justify-start px-6.25 ;
+}
+.card__text{
+    @apply flex flex-col gap-7.5 ;
+}
+.price{
+    @apply flex flex-row items-end ;
+}
+.price h3{
+    @apply font-[380] tracking-[2px] ;
+}
+.yellow{
+    @apply text-primary font-normal ;
+}
+.price h1{
+    @apply text-primary font-normal text-[40px] m-[0,0,0,6px] translate-[0,7px] ;
+}
+.food-name{
+    @apply flex flex-col gap-0.75 ;
+}
+.food-name h1{
+    @apply font-normal text-[35px] ;
+}
+.food-name h2{
+    @apply font-normal text-[35px] p-0 leading-2.5 tracking-[3px] ;
+}
+.card__text p{
+    @apply tracking-[2px] text-mid text-[14px] ;
+}
+.card__text a{
+    @apply inline-block place-content-center text-center text-[30px] p-0 w-12.5 h-12.5 ;
+}
+.menu_summary img{
+    @apply p-5 block w-full ;
+}
+.promos .container{
+    @apply p-[10px,0] ;
+}
+.offer{
+    @apply w-full flex flex-col place-content-center text-center ;
+}
+.offer h1,h2,h3,p{
+    @apply font-normal leading-11 ;
+}
+.offer h2{
+    @apply text-[40px] tracking-[5px] ;
+}
+.offer h1{
+    @apply text-[65px] m-[5px,0] ;
+}
+.offer p{
+    @apply text-mid mt-6.25 tracking-[1px]
+}
+.offer img{
+    @apply ml-30
+}
+.order{
+    @apply p-[30px,0];
+}
+.order .container{
+    @apply p-5 ;
+}
+.order__wrapper{
+    @apply flex flex-col gap-5 justify-center ;
+}
+.order__step__card{
+    @apply bg-lightmid flex flex-col place-content-center text-center ;
+}
+.order__step__card img{
+    @apply block justify-center m-0 pt-10 w-full ;
+}
+.info{
+    @apply p-7.5 flex flex-col gap-2.5 ;
+}
+.info p{
+    @apply tracking-[2px] text-mid ;
+}
+.title__tab{
+    @apply flex flex-col gap-2.5 ;
+}
+.title__tab img{
+    @apply m-[0,auto] object-contain max-w-17.5 p-0 ;
+}
+.title__tab h2{
+    @apply text-[35px] font-normal tracking-[3px] leading-1 place-content-center ;
+}
