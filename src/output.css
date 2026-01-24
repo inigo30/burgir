@@ -413,8 +413,47 @@
   letter-spacing: 1px;
   color: var(--color-mid);
 }
-.offer img {
-  margin-left: calc(var(--spacing) * 30);
+.promos__wrapper .offer:first-child {
+  background-image: url(/dist/img/offers1.png);
+}
+.promos__wrapper .offer:nth-child(2) {
+  background-image: url(/dist/img/offers2.png);
+}
+.promos__wrapper .offer:nth-child(2) .text {
+  position: relative;
+  top: 15vh;
+}
+.promos__wrapper .offer .inner__text {
+  position: relative;
+  bottom: calc(var(--spacing) * 6.25);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2.5);
+}
+.promos__wrapper .offer:last-child {
+  background-image: url(/dist/img/offers3.png);
+}
+.promos__wrapper .offer .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.promos__wrapper .offer:last-child .text {
+  position: relative;
+  bottom: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.promos__wrapper .offer h2 {
+  position: relative;
+  bottom: calc(var(--spacing) * 5);
+  left: calc(var(--spacing) * 5);
+  font-size: 30px;
+}
+.promos__wrapper {
+  display: grid;
+  grid-template-rows: 50vh 100vh 100vh;
 }
 .order {
   padding: 30px,0;
@@ -473,6 +512,12 @@
   font-weight: var(--font-weight-normal);
   --tw-tracking: 3px;
   letter-spacing: 3px;
+}
+.menu__tab ul {
+  display: flex;
+  justify-content: center;
+  gap: calc(var(--spacing) * 10);
+  padding: calc(var(--spacing) * 5);
 }
 @property --tw-border-style {
   syntax: "*";

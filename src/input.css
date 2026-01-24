@@ -119,11 +119,35 @@
     @apply text-[65px] m-[5px,0] ;
 }
 .offer p{
-    @apply text-mid mt-6.25 tracking-[1px]
+    @apply text-mid mt-6.25 tracking-[1px] ;
 }
-.offer img{
-    @apply ml-30
+.promos__wrapper .offer:first-child{
+    @apply bg-[url(/dist/img/offers1.png)] ;
 }
+.promos__wrapper .offer:nth-child(2){
+    @apply bg-[url(/dist/img/offers2.png)] ;
+}
+.promos__wrapper .offer:nth-child(2) .text{
+    @apply relative top-[15vh] ;
+}
+.promos__wrapper .offer .inner__text{
+    @apply relative bottom-6.25 flex flex-col gap-2.5 ;
+}
+.promos__wrapper .offer:last-child{
+    @apply bg-[url(/dist/img/offers3.png)] ;
+}
+.promos__wrapper .offer .text{
+    @apply flex flex-col items-center ;
+}
+.promos__wrapper .offer:last-child .text{
+    @apply relative bottom-[15vh] flex flex-col items-center ;
+}
+.promos__wrapper .offer h2{
+    @apply relative bottom-5 left-5 text-[30px] ;
+}
+.promos__wrapper{
+    @apply grid grid-rows-[50vh_100vh_100vh]
+} 
 .order{
     @apply p-[30px,0];
 }
@@ -153,4 +177,7 @@
 }
 .title__tab h2{
     @apply text-[35px] font-normal tracking-[3px] leading-1 place-content-center ;
+}
+.menu__tab ul{
+    @apply flex gap-10 justify-center p-5;
 }
