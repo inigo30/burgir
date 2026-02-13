@@ -19,7 +19,7 @@
     @apply md:sticky md:top-25 md:left-0 ;
 }
 .header .branding h3{
-    @apply hidden ;
+    @apply hidden text-black ;
 }
 .header__nav{
     @apply bg-dark absolute -right-250 h-calc top-25 w-full transition ;
