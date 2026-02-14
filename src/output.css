@@ -1592,6 +1592,7 @@
   }
 }
 .order__wrapper .curly-line {
+  display: none;
   @media (width >= 48rem) {
     position: absolute;
   }

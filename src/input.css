@@ -526,7 +526,8 @@
     @apply md:pl-16.25 md:pt-0 ;
 }
 .order__wrapper .curly-line{
-    @apply md:block md:absolute ;
+    @apply hidden 
+    md:block md:absolute ;
 }
 .order__wrapper .curly-line:first-of-type{
     @apply md:translate-[300px_80px] ;
